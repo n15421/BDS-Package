@@ -29,8 +29,16 @@
     "files": {
         "place": [
             {
-                "src": "*",
-                "dest": "*"
+                "src": ".lip/*",
+                "dest": ".lip" 
+            },
+            {
+                "src": "plugins/*",
+                "dest": "plugins"
+            },
+            {
+                "src": "server.properties",
+                "dest": "server.properties"
             }
         ],
         "remove": []
