@@ -1,7 +1,7 @@
 {
     "format_version": 2,
-    "tooth": "github.com/zimuya4153/BDS-Package",
-    "version": "1.0.1",
+    "tooth": "github.com/ZMBlocks/BDS-Package",
+    "version": "1.0.2",
     "info": {
         "name": "BDS整合包",
         "description": "一键安装+配置BDS基础设施",
@@ -14,39 +14,23 @@
             "server"
         ]
     },
-    "asset_url": "https://github.com/zimuya4153/BDS-Package/releases/download/v$(version)/other.zip",
+    "asset_url": "https://github.com/ZMBlocks/BDS-Package/releases/download/v$(version)/other.zip",
     "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "0.13.5",
-        "github.com/LiteLDev/LegacyScriptEngine": "0.8.20",
-        "gitea.litebds.com/LiteLDev/legacy-script-engine-nodejs": "0.8.20",
-        "github.com/LiteLDev/MoreDimensions": "0.4.1",
-        "github.com/LiteLDev/LeviOptimize": "0.3.0",
-        "github.com/LiteLDev/LeviAntiCheat": "0.3.7",
-        "github.com/LiteLDev/LegacyAddonsManager": "0.5.1",
-        "github.com/GroupMountain/GMLIB": "0.13.7",
-        "github.com/MiracleForest/iListenAttentively": "0.1.0"
+        "github.com/LiteLDev/LeviLamina": "1.0.1",
+        "gitea.litebds.com/LiteLDev/legacy-script-engine-quickjs": "0.9.4",
+        "gitea.litebds.com/LiteLDev/legacy-script-engine-lua": "0.9.4",
+        "gitea.litebds.com/LiteLDev/legacy-script-engine-nodejs": "0.9.4",
+        "github.com/LiteLDev/MoreDimensions": "0.5.0",
+        "github.com/LiteLDev/LeviOptimize": "0.4.0",
+        "github.com/LiteLDev/LeviAntiCheat": "0.4.0",
+        "github.com/MiracleForest/iListenAttentively-Release": "0.2.3",
+        "github.com/ShrBox/BackupHelper": "0.6.1"
     },
     "files": {
         "place": [
             {
-                "src": "server.properties",
-                "dest": "server.properties"
-            },
-            {
-                "src": "legacy_money_config.json",
-                "dest": "plugins/LegacyMoney/money.json"
-            },
-            {
-                "src": "levi_anti_cheat_config.json",
-                "dest": "plugins/LeviAntiCheat/config/config.json"
-            },
-            {
-                "src": "levilamina-config.json",
-                "dest": "plugins/LeviLamina/config/config.json"
-            },
-            {
-                "src": "GMLIB-LegacyRemoteCallApi/*",
-                "dest": "plugins/GMLIB-LegacyRemoteCallApi/"
+                "src": "*",
+                "dest": "*"
             }
         ],
         "remove": []

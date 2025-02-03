@@ -10,13 +10,14 @@ BDS 整合包，一键安装+配置 BDS
    3. 运行`lip-windows-amd64-setup.exe`并按照提示完成安装`(请勿取消勾选Add to PATH)`
 2. `[可选]`设置 Github 镜像 →`lip config GitHubMirrorURL https://github.bibk.top`
 3. `[可选]`设置 Go 模块代理镜像 →`lip config GoModuleProxyURL https://goproxy.cn`
-4. 安装整合包 →`lip install -y github.com/zimuya4153/BDS-Package`
+4. 安装整合包 → `lip install -y github.com/ZMBlocks/BDS-Package`
 
 ## 安装列表
 
 - [7-zip(命令行式压缩工具)](https://gitea.litebds.com/ShrBox/7-zip)
 - [BDS(服务端本体)](ithub.com/LiteLDev/bds)
 - [PreLoader(预加载工具)](https://github.com/LiteLDev/PeEditor)
+- [MagicBlob(BDS运行数据)](https://github.com/LiteLDev/bedrock-runtime-data)
 - [LeviLamina(Native 插件加载器)](https://github.com/LiteLDev/LeviLamina)
 - [CrashLogger(崩溃信息收集/崩溃日志)](https://github.com/LiteLDev/CrashLogger)
 - [LeviLamina-loc(LeviLamina 语言包)](https://github.com/LiteLDev/levilamina-loc)
@@ -27,26 +28,26 @@ BDS 整合包，一键安装+配置 BDS
 - [LegacyMoney(经济系统)](https://github.com/LiteLDev/LegacyMoney)
 - [LegacyParticleAPI(粒子生成器 API)](https://github.com/LiteLDev/LegacyParticleAPI)
 - [LegacyRemoteCall(远程调用 API)](https://github.com/LiteLDev/LegacyRemoteCall)
-- [GMLIB(API 前置库)](https://github.com/GroupMountain/GMLIB)
+- [GMLIB(API 前置库)](https://github.com/GroupMountain/GMLIB-Release)
 - [GMLIB-LegacyRemoteCallApi(GMLIB 的 LSE 插件兼容)](https://github.com/GroupMountain/GMLIB-LegacyRemoteCallApi)
-- [LegacyAddonsManager(Addon 管理器)](https://github.com/LiteLDev/LegacyAddonsManager)
 - [LeviAntiCheat(Lac 反作弊)](https://github.com/LiteLDev/LeviAntiCheat)
 - [LeviOptimize(BDS 优化插件)](https://github.com/LiteLDev/LeviOptimize)
 - [more-dimensions(多维度插件)](https://github.com/LiteLDev/MoreDimensions)
-- [iListenAttentively(事件前置库)](https://github.com/MiracleForest/iListenAttentively)
+- [iListenAttentively(事件前置库)](https://github.com/MiracleForest/iListenAttentively-Release)
+- [BackupHelper(热备份)](https://github.com/ShrBox/BackupHelper)
 
 ## 命令帮助
 
 - LeviLamina
-  - `tp` - 传送命令
-    - `/tp <目的地坐标> <维度ID> [忽略维度坐标转换]`
-      - `/tp 0 0 0 overworld` - 传送自己到主世界 0 0 0 位置
-      - `/tp 0 0 0 nether true` - 传送自己到主世界 0 0 0 位置(忽略维度坐标转换)
-      - `/tp ~ ~ ~ nether true` - 传送自己到当前坐标位置的地狱维度
-    - `/tp <实体> <目的地坐标> <维度ID> [忽略维度坐标转换]`
-      - `/tp @p 0 0 0 overworld` - 传送最近玩家到主世界 0 0 0 位置
-      - `/tp @e[type=minecraft:player] 0 0 0 overworld` - 传送所有玩家到主世界 0 0 0 位置
-      - `/tp @e[type=minecraft:player] 0 0 0 nether true` - 传送所有玩家到地狱 0 0 0 位置(忽略维度坐标转换)
+  - `teleportdim/tpdim` - 附带维度的传送命令
+    - `/tpdim <目的地坐标> <维度ID> [忽略维度坐标转换]`
+      - `/tpdim 0 0 0 overworld` - 传送自己到主世界 0 0 0 位置
+      - `/tpdim 0 0 0 nether true` - 传送自己到主世界 0 0 0 位置(忽略维度坐标转换)
+      - `/tpdim ~ ~ ~ nether true` - 传送自己到当前坐标位置的地狱维度
+    - `/tpdim <实体> <目的地坐标> <维度ID> [忽略维度坐标转换]`
+      - `/tpdim @p 0 0 0 overworld` - 传送最近玩家到主世界 0 0 0 位置
+      - `/tpdim @e[type=minecraft:player] 0 0 0 overworld` - 传送所有玩家到主世界 0 0 0 位置
+      - `/tpdim @e[type=minecraft:player] 0 0 0 nether true` - 传送所有玩家到地狱 0 0 0 位置(忽略维度坐标转换)
   - `crash` - 崩溃命令
     - `/crash [异常ID]`
       - `/crash` - 崩溃
@@ -96,29 +97,10 @@ BDS 整合包，一键安装+配置 BDS
     - `/money top [数量(最大100)]` - 查看金额排行榜
       - `/money top` - 查看金额排行榜前十
       - `/money top 5` - 查看金额排行榜前五
-- LegacyAddonsManager
-  - `addons` - Addon 管理命令
-    - `/addons <remove|enable|disable|uninstall> <索引值(通过list获取)>` - 删除/启用/禁用/卸载 Addon
-      - `/addons remove 0` - 删除第一个 Addon
-      - `/addons enable 0` - 启用第一个 Addon
-      - `/addons disable 0` - 禁用第一个 Addon
-      - `/addons uninstall 0` - 卸载第一个 Addon
-    - `/addons <remove|enable|disable|uninstall> <Addon名>` - 删除/启用/禁用/卸载 Addon
-      - `/addons remove TInformationBar` - 删除 TInformationBar Addon
-      - `/addons enable TInformationBar` - 启用 TInformationBar Addon
-      - `/addons disable TInformationBar` - 禁用 TInformationBar Addon
-    - `/addons install <路径>` - 安装 Addon
-      - `/addons install "./TInformationBar.mcpack"` - 安装服务端根目录下的 TInformationBar.mcpack Addon
-    - `/addons list [索引值]` - 列出所有 Addon/获取 Addon 信息
-      - `/addons list` - 列出所有 Addon
-      - `/addons list 0` - 列出第一个 Addon 信息
-    - `/addons list [Addon名]` - 列出所有 Addon/获取 Addon 信息
-      - `/addons list` - 列出所有 Addon
-      - `/addons list TInformationBar` - 列出 TInformationBar Addon 信息
 - LeviAntiCheat
   - `lac` - lac 命令
     - `/lac reload` - 重载配置文件
-    - `/lac reload` - 重载 lac 配置文件
+      - `/lac reload` - 重载 lac 配置文件
     - `lac <ban|unban> <玩家名> [原因] [封禁时间(单位:分钟)]` - 封禁/解封玩家
       - `/lac ban LiteLDev` - 封禁 LiteLDev
       - `/lac unban LiteLDev` - 解封 LiteLDev
@@ -126,6 +108,15 @@ BDS 整合包，一键安装+配置 BDS
 - LeviOptimize
   - `timing` - 显示服务器性能统计信息
     - `/timing` - 显示服务器性能统计信息
+- BackupHelper
+  - `backup` - 备份命令
+    - `/backup [list|reload|cancel]` - 备份主要命令
+      - `/backup` - 备份存档
+      - `/backup list` - 列出所有备份
+      - `/backup reload` - 重载配置文件
+      - `/backup cancel` - 取消当前备份
+    - `/backup recover <备份索引ID>` - 恢复备份(索引ID 通过 /backup list 获取)
+      - `/backup recover 1` - 恢复备份列表中第一个备份
 - legacy-script-engine-lua
   - `luadebug` - Lua 代码调试命令
     - `/luadebug [代码]` - 调试代码
@@ -139,5 +130,5 @@ BDS 整合包，一键安装+配置 BDS
 - legacy-script-engine-quickjs
   - `jsdebug` - QuickJS 代码调试命令
     - `/jsdebug [代码]` - 调试代码
-      - `/jsdebug` - 进入 NodeJS 代码调试模式
+      - `/jsdebug` - 进入 QuickJS 代码调试模式
       - `/jsdebug log("Hello World!")` - 调试代码`log("Hello World!")`
