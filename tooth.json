@@ -1,11 +1,11 @@
 {
     "format_version": 2,
     "tooth": "github.com/ZMBlocks/BDS-Package",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "info": {
         "name": "BDS整合包",
         "description": "一键安装+配置BDS基础设施",
-        "author": "啥也不会的子沐呀",
+        "author": "ZMBlocks",
         "tags": [
             "levilamina",
             "bds",
@@ -22,7 +22,7 @@
         "gitea.litebds.com/LiteLDev/legacy-script-engine-nodejs": "0.9.7",
         "github.com/LiteLDev/MoreDimensions": "0.5.0",
         "github.com/LiteLDev/LeviOptimize": "0.4.0",
-        "github.com/LiteLDev/LeviAntiCheat": "0.4.1",
+        "github.com/LiteLDev/LeviAntiCheat": "0.4.4",
         "github.com/MiracleForest/iListenAttentively-Release": "0.2.3",
         "github.com/ShrBox/BackupHelper": "0.6.1"
     },
