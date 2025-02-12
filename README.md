@@ -105,7 +105,7 @@ BDS 整合包，一键安装+配置 BDS
       - `/lac ban LiteLDev` - 封禁 LiteLDev
       - `/lac unban LiteLDev` - 解封 LiteLDev
       - `/lac ban LiteLDev "作弊" 60` - 封禁 LiteLDev 60 分钟,原因:作弊
-    - `lac <mute|unmute> <玩家名> [封禁时间(单位:分钟)]` - 禁言/解禁玩家
+    - `lac <mute|unmute> <玩家名> [禁言时间(单位:分钟)]` - 禁言/解禁玩家
       - `/lac mute LiteLDev` - 禁言 LiteLDev 10分钟
       - `/lac unmute LiteLDev` - 解禁 LiteLDev
       - `/lac mute LiteLDev 60` - 禁言 LiteLDev 60 分钟
