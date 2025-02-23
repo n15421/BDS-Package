@@ -15,7 +15,7 @@ BDS 整合包，一键安装+配置 BDS
 ## 安装列表
 
 - [7-zip(命令行式压缩工具)](https://gitea.litebds.com/ShrBox/7-zip)
-- [BDS(服务端本体)](ithub.com/LiteLDev/bds)
+- [BDS(服务端本体)](https://github.com/LiteLDev/bds)
 - [PreLoader(预加载工具)](https://github.com/LiteLDev/PeEditor)
 - [MagicBlob(BDS运行数据)](https://github.com/LiteLDev/bedrock-runtime-data)
 - [LeviLamina(Native 插件加载器)](https://github.com/LiteLDev/LeviLamina)
