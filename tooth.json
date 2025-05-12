@@ -1,7 +1,7 @@
 {
     "format_version": 3,
     "format_uuid": "b87906db-ac6d-4288-884e-68d2b78f4db0",
-    "tooth": "github.com/ZMBlocks/BDS-Package",
+    "tooth": "github.com/n15421/BDS-Package",
     "version": "1.2.1",
     "info": {
         "name": "BDS整合包",
