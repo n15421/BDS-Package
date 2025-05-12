@@ -1,46 +1,54 @@
 {
-    "format_version": 2,
+    "format_version": 3,
+    "format_uuid": "b87906db-ac6d-4288-884e-68d2b78f4db0",
     "tooth": "github.com/ZMBlocks/BDS-Package",
-    "version": "1.1.3",
+    "version": "1.2.1",
     "info": {
         "name": "BDS整合包",
         "description": "一键安装+配置BDS基础设施",
-        "author": "ZMBlocks",
         "tags": [
             "levilamina",
             "bds",
             "minecraft",
             "mc",
             "server"
-        ]
-    },
-    "asset_url": "https://github.com/ZMBlocks/BDS-Package/releases/download/v$(version)/other.zip",
-    "dependencies": {
-        "github.com/LiteLDev/LeviLamina": "1.0.1",
-        "gitea.litebds.com/LiteLDev/legacy-script-engine-quickjs": "0.9.7",
-        "gitea.litebds.com/LiteLDev/legacy-script-engine-lua": "0.9.7",
-        "gitea.litebds.com/LiteLDev/legacy-script-engine-nodejs": "0.9.7",
-        "github.com/LiteLDev/MoreDimensions": "0.5.0",
-        "github.com/LiteLDev/LeviOptimize": "0.4.0",
-        "github.com/LiteLDev/LeviAntiCheat": "0.4.5",
-        "github.com/MiracleForest/iListenAttentively-Release": "0.2.3",
-        "github.com/ShrBox/BackupHelper": "0.6.1"
-    },
-    "files": {
-        "place": [
-            {
-                "src": ".lip/*",
-                "dest": ".lip" 
-            },
-            {
-                "src": "plugins/*",
-                "dest": "plugins"
-            },
-            {
-                "src": "server.properties",
-                "dest": "server.properties"
-            }
         ],
-        "remove": []
-    }
+        "avatar_url": ""
+    },
+    "variants": [
+        {
+            "label": "",
+            "platform": "win-x64",
+            "dependencies": {
+                "github.com/LiteLDev/LeviLamina": "1.1.1",
+                "github.com/LiteLDev/LegacyScriptEngine": "0.10.6",
+                "github.com/LiteLDev/MoreDimensions": "0.6.0",
+                "github.com/LiteLDev/LeviOptimize": "0.5.1",
+                "github.com/LiteLDev/LeviAntiCheat": "0.5.0-rc.1",
+                "github.com/GroupMountain/GMLIB-Release": "1.0.2",
+                "github.com/GroupMountain/GMLIB-LegacyRemoteCallApi": "1.0.0",
+                "github.com/MiracleForest/iListenAttentively-Release": "0.4.2",
+                "github.com/ShrBox/BackupHelper": "0.7.1"
+            },
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://{{tooth}}/releases/download/v{{version}}/other.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "plugins/",
+                            "dest": "plugins"
+                        },{
+                            "type": "file",
+                            "src": "server.properties",
+                            "dest": "server.properties"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
